@@ -1,0 +1,25 @@
+<h1>Dynamic Form</h1>
+
+<div>
+  {{view Ember.Select
+    content=App.cities
+    optionValuePath="content.id"
+    optionLabelPath="content.name"
+    prompt="Please select a city"}}
+</div>
+
+<div>
+  {{view Ember.Select
+    content=App.cities
+    optionValuePath="content.attractions.id"
+    optionLabelPath="content.attractions.name"
+    prompt="Please select an attaction"}}
+</div>
+
+<div>
+  {{view Ember.Select
+    content=App.cities
+    optionValuePath="content.attractions.info.id"
+    optionLabelPath="content.attractions.info.season"
+    prompt="Please select a season"}}
+</div>
